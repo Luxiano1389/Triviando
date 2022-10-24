@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* index */
+
+.fondo {
+    background-image: url(./imagenes/fondo4.jpg);
+}
+
+body, html {
+    height: 100%;
+}
+
+.contenedor {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+span {
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 40px;
+}
+
+h1 {
+    font-family: 'Nova Flat', cursive;
+    font-size: 150px !important;
+    text-shadow: rgb(137, 26, 241) 3px 2px 2px;
+    font-weight: 700 !important;
+    color: #ffff1a;
+    margin-bottom: 30px !important;
+}
+
+/* .btn, .btn-lg {
+    min-width: 40% !important;
+} */
+
+.btn-continuar {
+    font-size: 1.4rem !important;
+    font-family: 'VT323', monospace !important;
+    padding: 0.6rem 1.7rem !important;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.btn-puntaje {
+    font-size: 1.4rem !important;
+    font-family: 'VT323', monospace !important;
+    margin-top: 5px;
+    margin-left: 0 !important;
+    padding: 0.6rem 9rem !important;
+}
+
+#usuario {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    border: none;
+    padding: 0.7rem 4.2rem;
+    border-radius: 6px;
+}
+
+/* Categorias */
+
+.fondo1 {
+    background-color: black;
+}
+
+.titulo {
+    font-family: 'VT323', monospace;
+    margin-bottom: 50px;
+    font-size: 1.9rem;
+    color: #ffff1a;
+    text-align: center;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-categoria {
+    font-size: 1.4rem !important;
+    font-family: 'VT323', monospace !important;
+    width: 30%;
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#saludo {
+    font-size: 100px !important;
+    text-align: center;
+    text-shadow: #ffff1a 3px 2px 2px;
+    font-weight: 700 !important;
+    color: rgb(137, 26, 241);
+}
+
+/* Musica, Geografia, Griega */
+
+.contenedor-preguntas {
+    align-items:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100%; */
+    font-family: 'Nova Flat', cursive;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+    color: white;
+}
+
+.contenedor-opciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    background-color: rgb(137, 26, 241);
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 70%;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.contenedor-opciones:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1rem 0 rgb(0, 0, 0) ;
+    transform: scale(1.02);
+    transform: 100ms;
+}
+
+#preguntas {
+    font-size: 35px;
+    margin-bottom: 30px;
+    width: 70%;
+    text-align: center;
+}
+
+.opcion-texto {
+    width: 100%;
+}
+
+.correcto {
+    background-color: #5BB318;
+}
+
+.incorrecto {
+    background-color:  #F90716;
+}
+
+.contenedor-informacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+}
+
+.informacion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.indice-puntaje, .indice-pregunta {
+    color: #ffff1a;
+}
+
+/* Resultado */
+
+.fin-juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn-guardar-puntaje {
+    padding: 0.6rem 4.7rem !important;
+    font-size: 1.4rem !important;
+    font-family: 'VT323', monospace !important;
+    margin-bottom: 10px;
+}
+
+.btn-inicio {
+    padding: 0.6rem 5rem !important;
+    font-size: 1.4rem !important;
+    font-family: 'VT323', monospace !important;
+}
+
+.nombre-usuario {
+    font-size: 2rem;
+    font-family: 'VT323', monospace;
+    color: #ffff1a ;
+    margin-bottom: 30px;
+}
+
+/* .puntaje-titulo {
+    font-size: 100px !important;
+    text-align: center;
+}
+ */
+.resultado {
+    text-shadow: #ffff1a 3px 2px 2px;
+    font-weight: 700 !important;
+    color: rgb(137, 26, 241);
+    font-size: 100px !important;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Puntajes + Altos */
+
+.puntaje-titulo {
+    font-family: 'VT323', monospace;
+    color: #ffff1a;
+    font-size: 60px !important;
+    background-color: rgb(137, 26, 241);
+    border-radius: 100px;
+    padding: 20px 100px;
+    border: white 5px solid;
+    font-weight: 400 !important;
+    text-shadow: black 3px 2px 2px;
+    margin-top: auto;
+}
+
+.puntajes-altos {
+    list-style: none;
+    color: white;
+    font-family: 'Nova Flat', cursive;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.puntaje-lista:hover {
+    transform: scale(1.2);
+}
+
+.puntaje-lista {
+    font-size: 25px;
+    transition: all 200ms;
+    text-align: center;
+}
