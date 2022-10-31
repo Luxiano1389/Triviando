@@ -5,7 +5,7 @@ const preguntas = document.querySelector("#preguntas"),
 
 
 //Array de preguntas y respuestas
-const preguntasMusica = [
+const preguntasGeografia = [
     {
         pregunta: "¿En qué continente se encuentra el \"Mar Muerto\"?",
         opcion1: "América",
@@ -87,7 +87,7 @@ const preguntasMax = 5, preguntaCorrecta = 10;
 iniciarTrivia = () => {
     contadorPreguntas = 0,
     puntaje = 0,
-    preguntasDisponibles = [...preguntasMusica],
+    preguntasDisponibles = [...preguntasGeografia],
     cargarPreguntas();
 };
 

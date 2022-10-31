@@ -1,7 +1,8 @@
 const preguntas = document.querySelector("#preguntas"),
     opcionTexto = Array.from(document.getElementsByClassName("opcion-texto")),
     indicePuntaje = document.querySelector(".indice-puntaje"),
-    indicePregunta = document.querySelector(".indice-pregunta");
+    indicePregunta = document.querySelector(".indice-pregunta"),
+    opcionCorrecta = document.querySelector(".opcion-correcta");
 
 
 //Array de preguntas y respuestas
@@ -35,8 +36,8 @@ const preguntasMusica = [
         respuesta: 2
     },
     {
-        pregunta: "¿Cuál fue la primera canción éxito de Los Beatles",
-        opcion1: "Yellow Submarine",
+        pregunta: "¿Cuál fue la primera canción éxito de Los Beatles?",
+        opcion1: "Yellow submarine",
         opcion2: "I want to hold your hand",
         opcion3: "Let it be",
         respuesta: 2
@@ -86,9 +87,9 @@ const preguntasMax = 5, preguntaCorrecta = 10;
 //Funciones
 iniciarTrivia = () => {
     contadorPreguntas = 0,
-    puntaje = 0,
-    preguntasDisponibles = [...preguntasMusica],
-    cargarPreguntas();
+        puntaje = 0,
+        preguntasDisponibles = [...preguntasMusica],
+        cargarPreguntas();
 };
 
 cargarPreguntas = () => {
@@ -124,22 +125,32 @@ opcionTexto.forEach(opcion => {
     opcion.addEventListener("click", e => {
         const opcionSeleccionada = e.target;
         const respuestaSeleccionada = opcionSeleccionada.dataset["number"];
+       
 
         //Aplicar colores a las preguntas correctas e incorrectas
-        const correctoIncorrecto = (respuestaSeleccionada == preguntaActual.respuesta) ? ("correcto") : ("incorrecto");
-        
-        if(correctoIncorrecto === "correcto") {
-            puntajeCorrecto(preguntaCorrecta);
-        }
+        const correctoIncorrecto = (respuestaSeleccionada === preguntaActual.respuesta) ? ("correcto") : ("incorrecto");
 
-        opcionSeleccionada.parentElement.classList.add(correctoIncorrecto);
+        if (correctoIncorrecto === "correcto") {
+            puntajeCorrecto(preguntaCorrecta);
+            opcionSeleccionada.parentElement.classList.add("correcto");
+            
+        } else {
+            opcionSeleccionada.parentElement.classList.add("incorrecto");
+
+            opcionTexto.forEach(opcion => {
+                const numero = opcion.dataset["number"];
+                opcionCorrecta.innerText = "La respuesta correcta es " + preguntaActual["opcion" + numero];
+
+            });
+        }
 
         setTimeout(() => {
             opcionSeleccionada.parentElement.classList.remove(correctoIncorrecto);
             cargarPreguntas();
         }, 800);
-        
+
     })
 });
+
 
 iniciarTrivia();

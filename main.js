@@ -5,7 +5,7 @@ continuar.disabled = false;
 
 guardarNombre = () => {
     localStorage.setItem("nombre", nombreUsuario.value.toUpperCase());
-}
+};
 
 nombreUsuario.addEventListener("change", () => {
     if (nombreUsuario.value === "") {

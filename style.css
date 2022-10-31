@@ -57,10 +57,6 @@ h1 {
     margin-bottom: 30px !important;
 }
 
-/* .btn, .btn-lg {
-    min-width: 40% !important;
-} */
-
 .btn-continuar {
     font-size: 1.4rem !important;
     font-family: 'VT323', monospace !important;
@@ -133,7 +129,6 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 100%; */
     font-family: 'Nova Flat', cursive;
     margin-left: 200px;
     margin-right: 200px;
@@ -172,6 +167,11 @@ h1 {
     width: 100%;
 }
 
+.opcion-correcta {
+    margin-top: 20px;
+    font-size: 20px ;
+}
+
 .correcto {
     background-color: #5BB318;
 }
@@ -200,6 +200,10 @@ h1 {
 
 .indice-puntaje, .indice-pregunta {
     color: #ffff1a;
+}
+
+.opcion-correcta {
+    color: white;
 }
 
 /* Resultado */
@@ -232,11 +236,6 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* .puntaje-titulo {
-    font-size: 100px !important;
-    text-align: center;
-}
- */
 .resultado {
     text-shadow: #ffff1a 3px 2px 2px;
     font-weight: 700 !important;
@@ -253,7 +252,7 @@ h1 {
     color: #ffff1a;
     font-size: 60px !important;
     background-color: rgb(137, 26, 241);
-    border-radius: 100px;
+    border-radius: 50px;
     padding: 20px 100px;
     border: white 5px solid;
     font-weight: 400 !important;
@@ -279,3 +278,26 @@ h1 {
     transition: all 200ms;
     text-align: center;
 }
+
+/* Sweet Alert */
+
+.swal-modal {
+    background-color: rgba(0, 0, 0);
+    border: 1px solid white;
+    border-radius: 1rem;
+    height: 50%;
+  }
+
+  .swal-title {
+    font-size: 100px;
+  }
+
+  .swal-text {
+    font-size: 25px;
+    color: #ffff1a;
+    font-family: 'VT323', monospace;
+  }
+
+  .swal-overlay {
+    background-color: #212529;
+  }

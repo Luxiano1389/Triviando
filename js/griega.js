@@ -5,7 +5,7 @@ const preguntas = document.querySelector("#preguntas"),
 
 
 //Array de preguntas y respuestas
-const preguntasMusica = [
+const preguntasGriega = [
     {
         pregunta: "¿Qué Dios comparte la paternidad del caballo alado \"Pegaso\"?",
         opcion1: "Apolo",
@@ -87,7 +87,7 @@ const preguntasMax = 5, preguntaCorrecta = 10;
 iniciarTrivia = () => {
     contadorPreguntas = 0,
     puntaje = 0,
-    preguntasDisponibles = [...preguntasMusica],
+    preguntasDisponibles = [...preguntasGriega],
     cargarPreguntas();
 };
 
