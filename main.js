@@ -12,7 +12,7 @@ nombreUsuario.addEventListener("change", () => {
         continuar.disabled = true;
     } else {
         continuar.disabled = false;
-        window.location.assign("./html/categorias.html");
+        window.location.assign("./html/pre-trivia.html");
         guardarNombre()
     }
 });
