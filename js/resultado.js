@@ -8,7 +8,7 @@ resultadoFinal.innerText = puntajeFinal;
 const puntajeMasAlto = JSON.parse(localStorage.getItem("puntajeMasAlto")) || [];
 const puntajeMaximoPintado = 6;
 
-
+//Funciones
 pintarUsuario = () => {
     let usuario = localStorage.getItem("nombre");
     nombreUsuarioFinal.innerText = usuario + ", ¿querés guardar tu puntaje?"
@@ -27,12 +27,9 @@ guardarPuntaje = () => {
     puntajeMasAlto.splice(6);
 
     localStorage.setItem("puntajeMasAlto", JSON.stringify(puntajeMasAlto));
-   /*  setTimeout(() => {
-        window.location.href = "../index.html";
-    }, 3500) */
-    
 };
 
+//Evento "click" para guardar puntaje final
 botonGuardar.addEventListener("click", (e) => {
     e.preventDefault();
     guardarPuntaje();

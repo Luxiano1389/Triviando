@@ -4,9 +4,11 @@ const nombre = document.querySelector("#nombre-usuario"),
     comenzar = document.querySelector(".comenzar"),
     instrucciones = document.querySelector(".instrucciones");
 
+//Definicion de variables
 let contador = 6;
 let redirigir = "./trivia.html";
 
+//Funciones 
 pintarNombre = () => {
     nombre.innerText += localStorage.getItem("nombre");
 }
@@ -15,6 +17,8 @@ pintarNombre();
 
 comenzar.style.visibility = "hidden";
 
+
+//Evento "click"
 btnEntendido.addEventListener("click", () => {
     comenzar.style.visibility = "visible";
     instrucciones.style.visibility = "hidden";
