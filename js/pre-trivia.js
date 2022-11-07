@@ -17,7 +17,6 @@ pintarNombre();
 
 comenzar.style.visibility = "hidden";
 
-
 //Evento "click"
 btnEntendido.addEventListener("click", () => {
     comenzar.style.visibility = "visible";
